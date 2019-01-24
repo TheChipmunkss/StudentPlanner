@@ -1,8 +1,9 @@
 package connexion;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class simpleFenetre extends JFrame{
+	
 		/**
 	 * 
 	 */
@@ -18,9 +19,9 @@ public class simpleFenetre extends JFrame{
 			setLocationRelativeTo(null); //centre la fenêtre sur l'écran
 			setResizable(false); //Interdit de redimensionner la fenêtre
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //fermer la fenêtre lorsque l'on clique sur la croix
+			
 		}
-	}
-	
+}
 
 
 
