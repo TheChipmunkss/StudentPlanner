@@ -20,7 +20,7 @@ public class mainFen extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JTable tableau;
-	private JButton change = new JButton("Changer la taille");
+	private JButton change = new JButton("Ouvrir nouvelle fenêtre");
 	private String[] comboData = {"test","test","test"};
 	private String autres = "Autres";
 	private JComboBox combo;
@@ -36,11 +36,11 @@ public class mainFen extends JFrame {
 	private void createContent() {
 		
 		Object[][] data = {
-				{new Boolean(true), comboData[0] , " ", "Projets"},
-				{new Boolean(true),comboData[0]," " , "Devoirs Maisons"},
-				{new Boolean(true),comboData[0], " ", "Nourrit ton cerveau"},
-				{new Boolean(true),comboData[0], " ", "Méditation"},
-				{new Boolean(true),comboData[0], " ", "Planning"}
+				{new Boolean(true),  " ",comboData[0] , "Projets"},
+				{new Boolean(false), " ",comboData[0], "Devoirs Maisons"},
+				{new Boolean(true), " ",comboData[0], "Nourrit ton cerveau"},
+				{new Boolean(true), " ",comboData[0], "Méditation"},
+				{new Boolean(true), " ",comboData[0], "Planning"}
 			};
 		
 		String title[] = {" " , "A Faire" , "Calendrier ?" , "Autres" };
@@ -65,8 +65,11 @@ public class mainFen extends JFrame {
 	
 	public void actionPerformed(ActionEvent arg0) {
 		//Clique bouton ouvre une autre fenêtre
-		this.dispose();
-		Projets fen = new Projets();
+		final JFrame frame = new JFrame("test");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300, 300);
+		frame.setVisible(true);
+		
 	}
 	
 

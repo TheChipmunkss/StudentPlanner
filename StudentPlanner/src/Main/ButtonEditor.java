@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 
 public class ButtonEditor extends DefaultCellEditor {
@@ -32,7 +33,7 @@ public class ButtonEditor extends DefaultCellEditor {
 	      //On définit le numéro de ligne à notre listener
 	      bListener.setRow(row);
 	      //Idem pour le numéro de colonne
-	      bListener.setColumn(column);
+	      bListener.setColumn(4);
 	      //On passe aussi en paramètre le tableau pour des actions potentielles
 	      bListener.setTable(table);
 	      //On réaffecte le libellé au bouton
@@ -54,13 +55,11 @@ public class ButtonEditor extends DefaultCellEditor {
 	     public JButton getButton(){return this.button;}
 	      
 	     public void actionPerformed(ActionEvent arg0) {
-	    	 
-	    	 this.dispose();
-	    	 Projets fen = new Projets();
+	    	 final JFrame frame = new JFrame("test");
+	 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	 		frame.setSize(300, 300);
+	 		frame.setVisible(true);
+	    	
 	     }
-		private void dispose() {
-			// TODO Auto-generated method stub
-			
-		}
 	  }
 	}
