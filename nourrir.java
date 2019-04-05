@@ -3,6 +3,8 @@ package connexion;
 import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.AbstractButton;
 import javax.swing.ImageIcon;
@@ -10,8 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-
-
+import java.awt.Desktop;  
 
 public class nourrir extends JFrame{
 	
@@ -58,7 +59,15 @@ public class nourrir extends JFrame{
 			
 			pat.setVerticalTextPosition(SwingConstants.CENTER);
 			pat.setHorizontalTextPosition(SwingConstants.CENTER);
-			
+				
+			try {
+				Desktop.getDesktop().open(new File("/Volumes/ISN 06/Recette pdf/Pâtes au thon.pdf"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+					
 			
 			jp.add(pat);
 			getContentPane().add(pat);
@@ -72,7 +81,12 @@ public class nourrir extends JFrame{
 			riz.setIcon(new ImageIcon("/Volumes/ISN O6/Photo/Riz.jpeg"));
 			riz.setVerticalTextPosition(SwingConstants.CENTER);
 			riz.setHorizontalTextPosition(SwingConstants.CENTER);
-			
+			try {
+				Desktop.getDesktop().open(new File("/Volumes/ISN 06/Recette pdf/Riz au légumes.pdf"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			jp.add(riz);
 			getContentPane().add(riz);
 			
@@ -85,7 +99,13 @@ public class nourrir extends JFrame{
 			soupe.setIcon(new ImageIcon("/Volumes/ISN O6/Photo/soupe.jpg"));
 			soupe.setVerticalTextPosition(SwingConstants.CENTER);
 			soupe.setHorizontalTextPosition(SwingConstants.CENTER);
-			
+		
+			try {
+				Desktop.getDesktop().open(new File("/Volumes/ISN 06/Recette pdf/Soupe.pdf"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			jp.add(soupe);
 			getContentPane().add(soupe);
 			
@@ -178,6 +198,11 @@ public class nourrir extends JFrame{
 		
 		}
 		
+		private void open(File file) {
+			// TODO Auto-generated method stub
+			
+		}
+
 		public static void main(String[] args) {
 			nourrir nourrir = new nourrir();
 			
