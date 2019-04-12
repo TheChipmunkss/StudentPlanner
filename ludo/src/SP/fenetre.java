@@ -246,8 +246,7 @@ public class fenetre extends JFrame implements ActionListener{
 		
 		//On affiche la fenêtre
 		
-		getContentPane().setBackground(Color.WHITE);
-		validate();
+		
 		this.setVisible(true);
 		go();
 	}	
