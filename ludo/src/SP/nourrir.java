@@ -13,6 +13,10 @@ import javax.swing.SwingConstants;
 public class nourrir extends JFrame{
 	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JButton pat = new JButton("Pâtes au thon");
 	JButton riz = new JButton ("Riz au légumes");
 	JButton soupe = new JButton ("Soupe");
@@ -51,7 +55,7 @@ public class nourrir extends JFrame{
 		gbc.ipadx = 0;
 		gb.setConstraints(pat,gbc);
 		
-		pat.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/pate.jpg"));
+		
 		
 		pat.setVerticalTextPosition(SwingConstants.CENTER);
 		pat.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -69,7 +73,7 @@ public class nourrir extends JFrame{
 		
 		gb.setConstraints(riz,gbc);
 	
-		riz.setIcon(new ImageIcon("/Volumes/ISN O6/Photo/Riz.jpeg"));
+		
 		riz.setVerticalTextPosition(SwingConstants.CENTER);
 		riz.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -83,7 +87,7 @@ public class nourrir extends JFrame{
 		
 		gb.setConstraints(soupe,gbc);
 		
-		soupe.setIcon(new ImageIcon("/Volumes/ISN O6/Photo/soupe.jpg"));
+		
 		soupe.setVerticalTextPosition(SwingConstants.CENTER);
 		soupe.setHorizontalTextPosition(SwingConstants.CENTER);
 	
@@ -95,7 +99,7 @@ public class nourrir extends JFrame{
 		//Bouton 4 
 		gb.setConstraints(omelette,gbc);
 		
-		omelette.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/omel.jpg"));
+		
 		omelette.setVerticalTextPosition(SwingConstants.CENTER);
 		omelette.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -108,7 +112,7 @@ public class nourrir extends JFrame{
 
 		gb.setConstraints(quiche,gbc);
 		
-		quiche.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/quiche.jpg"));
+		
 		quiche.setVerticalTextPosition(SwingConstants.CENTER);
 		quiche.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -120,7 +124,7 @@ public class nourrir extends JFrame{
 		//Bouton 6 
 		gb.setConstraints(steak,gbc);
 		
-		steak.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/quiche.jpg"));
+		
 		steak.setVerticalTextPosition(SwingConstants.CENTER);
 		steak.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -130,7 +134,7 @@ public class nourrir extends JFrame{
 		//Bouton 7 
 		gb.setConstraints(puree,gbc);
 		
-		puree.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/quiche.jpg"));
+		
 		puree.setVerticalTextPosition(SwingConstants.CENTER);
 		puree.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -140,7 +144,7 @@ public class nourrir extends JFrame{
 		//Bouton 8 
 		gb.setConstraints(mix,gbc);
 		
-		mix.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/omel.jpg"));
+	
 		mix.setVerticalTextPosition(SwingConstants.CENTER);
 		mix.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -152,7 +156,7 @@ public class nourrir extends JFrame{
 		//Bouton 9 
 		gb.setConstraints(gratin,gbc);
 		
-		gratin.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/omel.jpg"));
+		
 		gratin.setVerticalTextPosition(SwingConstants.CENTER);
 		gratin.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -164,7 +168,7 @@ public class nourrir extends JFrame{
 		//Bouton 10 
 		gb.setConstraints(vegi,gbc);
 		
-		vegi.setIcon(new ImageIcon("/Volumes/ISN 06/Photo/omel.jpg"));
+		
 		vegi.setVerticalTextPosition(SwingConstants.CENTER);
 		vegi.setHorizontalTextPosition(SwingConstants.CENTER);
 		
@@ -173,9 +177,9 @@ public class nourrir extends JFrame{
 		
 		
 		
-		getContentPane().setBackground(Color.WHITE);
-		validate();
-		this.setVisible(true);
+	getContentPane().setBackground(Color.WHITE);
+	validate();
+	this.setVisible(true);
 		
 	}
 }

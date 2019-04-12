@@ -30,7 +30,7 @@ public class fenetre extends JFrame implements ActionListener{
 	//Création des boutons
 	JButton project = new JButton("PROJETS");
 	JButton dm = new JButton("DEVOIRS MAISONS");
-	JButton ntc = new JButton("NOURRIT TON CERVEAU");
+	JButton nourrir = new JButton("NOURRIT TON CERVEAU");
 	JButton planning = new JButton("PLANNING");
 	JButton minuteur = new JButton("Minuteur");
 	
@@ -47,7 +47,7 @@ public class fenetre extends JFrame implements ActionListener{
 		//this.setSize(900,600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.setLayout(gb);
 
 		Vector<String> vecList = studentPlannerDB.getmessage_otd();
@@ -68,7 +68,7 @@ public class fenetre extends JFrame implements ActionListener{
 		gbc.insets = new Insets(20,20,20,20);
 		gb.setConstraints(project, gbc);
 		gb.setConstraints(dm, gbc);
-		gb.setConstraints(ntc, gbc);
+		gb.setConstraints(nourrir, gbc);
 		gb.setConstraints(planning, gbc);
 		gb.setConstraints(minuteur, gbc);
 		
@@ -131,31 +131,31 @@ public class fenetre extends JFrame implements ActionListener{
 		
 		
 		//Bouton Nourrit ton cerveau
-		ntc.setIcon(new ImageIcon(getClass().getClassLoader().getResource("ntc.jpg")));
-		ntc.setVerticalTextPosition(SwingConstants.CENTER);
-		ntc.setHorizontalTextPosition(SwingConstants.CENTER);
-		ntc.setPressedIcon(new ImageIcon(getClass().getClassLoader().getResource("ntc.jpg")));
-		ntc.setDisabledIcon(new ImageIcon(getClass().getClassLoader().getResource("ntc.jpg")));
-		ntc.setBorderPainted(true);
-		ntc.setFocusPainted(true);
-		ntc.doClick();
-		ntc.setBackground(Color.WHITE);
-		ntc.setForeground(Color.BLACK);
-		ntc.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		nourrir.setIcon(new ImageIcon(getClass().getClassLoader().getResource("ntc.jpg")));
+		nourrir.setVerticalTextPosition(SwingConstants.CENTER);
+		nourrir.setHorizontalTextPosition(SwingConstants.CENTER);
+		nourrir.setPressedIcon(new ImageIcon(getClass().getClassLoader().getResource("ntc.jpg")));
+		nourrir.setDisabledIcon(new ImageIcon(getClass().getClassLoader().getResource("ntc.jpg")));
+		nourrir.setBorderPainted(true);
+		nourrir.setFocusPainted(true);
+		nourrir.doClick();
+		nourrir.setBackground(Color.WHITE);
+		nourrir.setForeground(Color.BLACK);
+		nourrir.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		
-			ntc.addMouseListener(new MouseListener(){
+			nourrir.addMouseListener(new MouseListener(){
 				public void mouseClicked(MouseEvent e) {}
 				public void mousePressed(MouseEvent e) {}
 				public void mouseReleased(MouseEvent e) {}
 				public void mouseEntered(MouseEvent e) {
-					ntc.setBorder(BorderFactory.createLineBorder(Color.gray));
+					nourrir.setBorder(BorderFactory.createLineBorder(Color.gray));
 				}
 				public void mouseExited(MouseEvent e) {
-					ntc.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+					nourrir.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 				}
 			});
-		jp.add(ntc);
-		getContentPane().add(ntc);
+		jp.add(nourrir);
+		getContentPane().add(nourrir);
 		
 		
 		//Bouton Planning
@@ -218,7 +218,7 @@ public class fenetre extends JFrame implements ActionListener{
 		//Initialisation des Action Listener
 		project.addActionListener(new BoutonListener());
 		dm.addActionListener(new Bouton2Listener());
-		ntc.addActionListener(new Bouton3Listener());
+		nourrir.addActionListener(new Bouton3Listener());
 		planning.addActionListener(new Bouton4Listener());
 		minuteur.addActionListener(new Bouton5Listener());
 		
@@ -245,6 +245,9 @@ public class fenetre extends JFrame implements ActionListener{
 		*/
 		
 		//On affiche la fenêtre
+		
+		getContentPane().setBackground(Color.WHITE);
+		validate();
 		this.setVisible(true);
 		go();
 	}	
